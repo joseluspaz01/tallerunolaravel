@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pagina1', function () {
+    return view('pagina1',[
+        'name' => 'Jose Paz',
+        'phone' => '31875698745',
+        'email' => 'jlpj87@gmail.com'
+    ]);
+});
+
+
+Route::get('/pagina2/{numero}', function ($numero) {
+    return view('pagina2',[
+        'numero' => $numero
+    ]);
+});
+
+
+    
